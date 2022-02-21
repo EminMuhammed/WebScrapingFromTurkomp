@@ -55,7 +55,7 @@ def parse_products(product_urls):
         tr_all = table.find_all("tr")
         print(product_name)
         liste_icerik = parse_table(tr_all)
-        liste.append([product_name, liste_icerik])
+        liste.append([url, product_name, liste_icerik])
         print("------------------------------------------------------")
 
     return liste
@@ -63,7 +63,7 @@ def parse_products(product_urls):
 
 def save_excel(content):
     df = pd.DataFrame(content)
-    df.to_excel("D:/GİTHUB REPO/Scraping/BesinDegerleri/besindegerleri.xlsx")
+    df.to_excel("D:/GİTHUB REPO/Scraping/BesinDegerleri/besindegerleri2.xlsx")
 
 
 soup = get_content(url)
